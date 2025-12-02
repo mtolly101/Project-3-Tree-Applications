@@ -1,6 +1,6 @@
 # TREE_DESIGN.md
 ## Tree Selection
-Which tree did you choose and why? Trie (Prefix Tree) because it is very good at word and prefix based tasks like autocomplete and spell checking. These are common in real apps (search bars, code editors, messaging apps) and the operations are easier to implement than a self balancing tree while still being powerful.
+Which tree did you choose and why? We chose the Trie (Prefix Tree) as it's very good at word and prefix-based tasks like autocomplete and spell checking. These features are common in real apps (search bars, code editors, messaging apps) and the operations are easier to implement than a self-balancing tree while still being powerful.
 
 ## Use Cases
 What problems does this tree solve well? 
@@ -8,7 +8,8 @@ What problems does this tree solve well?
   - Dictionary words
   - City names/course titles
   - Commands in a CLI
-- Spell checking and “did you mean?” style suggestions
+  - Any operation that involves a search
+- Spell checking and “did you mean?” style suggestions, typically seen in browsers
 - Quickly finding all words that start with a given prefix
 - Efficiently storing large word sets that share prefixes
 
@@ -18,7 +19,7 @@ What makes this tree unique?
 - Paths from root node represent prefixes of words
 - Words are marked by a boolean is_end flag
 - Many strings can share large portions of memory due to overlapping prefixes
-- Performance depends on input length not the number of stored words
+- Performance depends on input length, not the number of stored words
 What are its performance characteristics?
 - Insert is O(m)
 - Search is O(m)
