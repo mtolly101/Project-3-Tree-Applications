@@ -1,11 +1,11 @@
 # Project 3 Tree Applications
 ## Project Title and Description
-What tree did you implement? We implemented the Trie (prefix tree) from scratch in Python and uses it in a small command line application that provides:
+What tree did you implement? We implemented the Trie (prefix tree) from scratch in Python and used it in a small command line application that provides the following results:
 - Autocomplete suggestions based on a typed prefix
 - Exact word lookup spell checking
 - Inserting and deleting words
 - Viewing how many words are stored
-The goal is to show how a Trie can efficiently handle prefix based search
+The goal is to show how a Trie can efficiently handle a prefix-based search
 compared to a simple list or array.
 
 Who would use this and why?
@@ -39,9 +39,9 @@ Count: Displays the number of words currently in the trie
 Quit: Exit the program
 
 ## Screenshots/Demos
-Main Menu which shows the app startup
-Autocomplete Example which shows suggestions for a prefix
-Insert/Delete/Count Example which shows modifying the trie and verifying changes
+Main Menu: shows the app startup
+Autocomplete Example: shows suggestions for a prefix
+Insert/Delete/Count Example: shows modifications for the trie and verifying changes
 
 ## Tree Implementation Details
 - Tree Type: Trie (Prefix Tree)
@@ -63,12 +63,12 @@ Initial design:
 - get_words_with_prefix
 Changed:
 - count_words() to show the total number of items in the CLI
-- limit parameter for get_words_with_prefix to avoid printing hundreds of words
+- limit parameter for get_words_with_prefix to avoid printing hundreds of words, limited to 20 results
 - Internal helper _find_node() to simplify repeated traversal logic
 Why did you need those changes?
 Building the CLI revealed what information the user needs to see and what helper functions simplified the code
 What did you learn from this iterative process?
-- Designing an interface upfront is hard and building the application exposes missing functionality
+- Designing an interface upfront is complicated. Building the application exposes missing functionalities
 - Small helper methods reduce duplication
 - Real applications often drive the tree’s final interface
 
